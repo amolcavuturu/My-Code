@@ -1,5 +1,5 @@
 #Set working Directory: example --> Bhavcopies for Feb 2019
-setwd('D:/Investment Resources/zOthers/Scripts/Trades/Derivatives Bhavcopy/FO bhavcopies/2020/Feb')
+setwd('C:/Desktop')
 
 #Define start and end dates
 startDate = as.Date("2020-02-01", order="ymd")

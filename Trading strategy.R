@@ -13,77 +13,7 @@ library(PerformanceAnalytics)
 # .blotter <- new.env()
 # .strategy <- new.env()
 
-####Import stock
-# nifty <-read.csv("D:\\Data Science\\Datasets\\Stock\\xls\\data.csv")
-# # nifty <- subset(nifty, select = c(Close, P.E, P.B, VIX))
-# nifty$Date <- as.Date(nifty$Date, format = "%d-%b-%y")
 
-# #convert to xts timeseries
-# nifty <- xts(x = nifty[, -1], order.by = nifty[, 1])
-
-# #calculate return
-# nifty <- ROC(nifty, na.pad = FALSE)
-# View(nifty)
-# colSums(is.na(nifty))
-# str(nifty)
-
- 
-# #########descriptive analysis
-# describe(nifty)
-# hist(nifty$Low)
-# hist(nifty$P.E)
-# hist(nifty$P.B)
-# hist(nifty$VIX)
-# corrplot(cor(nifty))
-# 
-# 
-# ######Simple linear regression model
-# modelT<-lm(Close~.,data=nifty)
-# summary(modelT)
-# plot(modelT)
-
-
-#####linear forecasting
-# library(car)
-# library(caret)
-# index<-createDataPartition(sales$sales,p=0.7,list=F)
-# index
-# sales_train<-sales[index,]
-# sales_test<-sales[-index,]
-# MLmodel<-lm(sales~.,data=sales_train)
-# summary(MLmodel)
-# vif(MLmodel)
-# fmodel<-lm(sales~TV+radio,data=sales_train)
-# summary(fmodel)
-# vif(fmodel)
-# plot(fmodel)
-# Fmodel<-step(fmodel,direction = "forward")
-# summary(Fmodel)
-# Bmodel<-step(fmodel,direction = "backward")
-# summary(Bmodel)
-# library(dvmisc)
-# get_mse(fmodel)
-# get_mse(Fmodel)
-# get_mse(Bmodel)
-# test1<-subset(sales_test,select=-sales)
-# predictions<-predict(Bmodel,newdata=test1)
-# compare<-data.frame(org=sales_test$sales,est=predictions)
-# compare
-# cor(compare$org,compare$est)
-# plot(compare$org,compare$est)
-# min_max_accuracy <- mean(apply(compare, 1, min) / apply(compare, 1, max))  
-# min_max_accuracy
-# mape <- mean(abs((compare$est - compare$org))/compare$org)  
-# map
-# library(DAAG)
-# cvResults <- suppressWarnings(CVlm(sales, form.lm=sales~TV+radio, m=5, dots=FALSE, seed=29, legend.pos="topleft",  printit=FALSE, main="Small symbols are predicted values while bigger ones are actuals."));  # performs the CV
-# attr(cvResults, 'ms')
-
-
-
-
-
-######## example
 
 initdate <- "2015-01-01"
 frm <- "2015-01-01"
